@@ -1,6 +1,5 @@
-const musicDb = [
-    {
-        id: 'lp-1',
+const musicDb = {
+    'lp-1': {
         title: 'Muscia para borrachos',
         date: '12-03-1987',
         tracks: [
@@ -9,8 +8,7 @@ const musicDb = [
             'El dolor mas doloroso'
         ]
     },
-    {
-        id: 'lp-2',
+    'lp-2': {
         title: 'Enya',
         date: '12-03-1997',
         tracks: [
@@ -20,8 +18,7 @@ const musicDb = [
             'Se zen'
         ]
     },
-    {
-        id: 'lp-3',
+    'lp-3': {
         title: 'OBK',
         date: '12-03-2007',
         tracks: [
@@ -30,8 +27,7 @@ const musicDb = [
             'Amante bandido (version pasodoble)'
         ]
     },
-    {
-        id: 'lp-4',
+    'lp-4': {
         title: 'Alejandro Sanz',
         date: '12-03-1987',
         tracks: [
@@ -40,8 +36,7 @@ const musicDb = [
             'Desafinando con acento aduluz mientras degollo un gato'
         ]
     },
-    {
-        id: 'lp-5',
+    'lp-5': {
         title: 'Juaquin Sabina',
         date: '12-03-1987',
         tracks: [
@@ -50,16 +45,10 @@ const musicDb = [
             'Me mola las drogas de Madrid'
         ]
     }
-];
+}
 
 function managerDisco (id, prop, value) {
-    let discoParaModificar = null;
-    let leng = musicDb.length;
-    let index = 0;
-
-    do{
-        discoParaModificar = musicDb[index++];
-    } while((discoParaModificar.id !== id) && (index < leng));
+    let discoParaModificar = musicDb[id];
 
     console.log('Disco a modificar: ', discoParaModificar);
 }
